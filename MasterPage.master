@@ -1,0 +1,95 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 614px;
+        }
+        .auto-style2 {
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+    <div>
+        <table style="width: 100%;">
+            <tr>
+                <td class="auto-style2">
+                    <asp:Image ID="Image2" runat="server" Height="150px" ImageUrl="~/logo/9ed01a64-9d57-4df6-bd35-48b4e03a7107_200x200.png" Width="150px" />
+                </td>
+                <td class="auto-style1">
+                    <h1>
+                        <asp:Label ID="Label1" runat="server" style="font-size: medium; text-align: right" Text="Welcome to Ticket House"></asp:Label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="Label4" runat="server"></asp:Label>
+                    </h1>
+                </td>
+                <td>
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home_master.aspx">HOME</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/About.aspx">ABOUT</asp:HyperLink>
+                &nbsp;
+                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" 
+                        Text="LOG OUT" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">
+                    <asp:Label ID="Label2" runat="server" Text="Search"></asp:Label>
+                </td>
+                <td class="auto-style1">
+                    <asp:TextBox ID="TextBox1" runat="server" Width="480px"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:Button ID="Button1" runat="server" Text="SEARCH" OnClick="Button1_Click" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">
+                    <asp:Label ID="Label3" runat="server" Text="MOVIES MEDIUM"></asp:Label>
+                </td>
+                <td class="auto-style1">
+                    
+                    <asp:ImageButton ID="ImageButton1" runat="server" 
+                        ImageUrl="~/movies_poster/English.JPG" 
+                        Height="120px" Width="120px" OnClick="ImageButton1_Click" />
+&nbsp;&nbsp;&nbsp;
+                    
+                    <asp:ImageButton ID="ImageButton2" runat="server" 
+                        ImageUrl="~/movies_poster/HINDI1.JPG" Height="120px" Width="120px" OnClick="ImageButton2_Click" />
+&nbsp;&nbsp;&nbsp;
+                    
+                    <asp:ImageButton ID="ImageButton3" runat="server" 
+                        ImageUrl="~/movies_poster/Bengali.JPG" Height="120px" Width="120px" OnClick="ImageButton3_Click" />
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style1">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" colspan="3">
+                    <asp:Image ID="Image1" runat="server" Height="650px" ImageUrl="~/movies_poster/background2.jpeg" Width="100%" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" colspan="3">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
